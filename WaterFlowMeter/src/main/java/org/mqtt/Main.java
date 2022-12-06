@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws MqttException, InterruptedException {
-        MqttPublisher publisher = new MqttPublisher("tcp://localhost:1883", "iot_data", new ArrayList<>());
+        MqttPublisher publisher = new MqttPublisher();
         publisher.publish();
     }
 }

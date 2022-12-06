@@ -4,17 +4,25 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MqttPublisher {
-    private final String url;
-    private final String topic;
-    private final List<Sensor> sensors;
+    private String url;
+    private String topic;
+    private List<Sensor> sensors;
 
     public MqttPublisher(String url, String topic, List<Sensor> sensors) {
         this.url = url;
         this.topic = topic;
+        this.sensors = new ArrayList<Sensor>();
         this.sensors = sensors;
+    }
+    public MqttPublisher() {
+        this.url = "tcp://localhost:1883";
+        this.topic = "iot_data";
+        this.sensors = new ArrayList<Sensor>();
+        createMessage();
     }
 
     private void createMessage(){
@@ -31,7 +39,7 @@ public class MqttPublisher {
 
         while(true) {
             client.connect();
-            createMessage();
+            //createMessage();
 
             for (var sensor:sensors){
                 message.setPayload(sensor.toString().getBytes());
