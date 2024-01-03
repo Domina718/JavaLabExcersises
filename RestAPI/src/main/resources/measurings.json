@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "client": {
+      "id": 3,
+      "address": "adresa17",
+      "measuring": []
+    },
+    "device": {
+      "id": 4,
+      "measuring": []
+    },
+    "data": "275.72 kW",
+    "date": "2023-12-09"
+  },
+  {
+    "id": 2,
+    "client": {
+      "id": 4,
+      "address": "adresa6",
+      "measuring": []
+    },
+    "device": {
+      "id": 1,
+      "measuring": []
+    },
+    "data": "254.91 kW",
+    "date": "2023-12-09"
+  },
+  {
+    "id": 3,
+    "client": {
+      "id": 1,
+      "address": "adresa38",
+      "measuring": []
+    },
+    "device": {
+      "id": 2,
+      "measuring": []
+    },
+    "data": "132.63 kW",
+    "date": "2023-12-09"
+  },
+  {
+    "id": 4,
+    "client": {
+      "id": 5,
+      "address": "adresa41",
+      "measuring": []
+    },
+    "device": {
+      "id": 3,
+      "measuring": []
+    },
+    "data": "116.77 kW",
+    "date": "2023-12-09"
+  }
+]

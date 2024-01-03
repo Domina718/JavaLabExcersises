@@ -1,15 +1,15 @@
-package model;
+package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-public class Device {
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String data;
+    private String name;
 }

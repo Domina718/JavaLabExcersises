@@ -16,6 +16,10 @@ public class MyColor {
         float cyan, magenta, yellow, black;
         int maxValue = Math.max(Math.max(red, green), blue);
 
+        if (cmykValues == null) {
+            cmykValues = new float[3];
+        }
+
         if(maxValue == 0){
             cyan = 0.0f;
             magenta = 0.0f;
@@ -42,6 +46,10 @@ public class MyColor {
         float red = (float) r / 255.0f;
         float green = (float) g / 255.0f;
         float blue = (float) b / 255.0f;
+
+        if (hslValues == null) {
+            hslValues = new float[3];
+        }
 
         float maxValue = Math.max(Math.max(red, green), blue);
         float minValue = Math.min(Math.min(red, green), blue);

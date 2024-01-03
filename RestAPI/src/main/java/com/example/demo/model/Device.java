@@ -1,18 +1,17 @@
-package model;
+package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Set;
+
 @Data
 @Entity
-public class Client {
+public class Device {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private Address address;
-
-    @Column
-    private Device device;
+    @OneToMany(mappedBy = "device")
+    private Set<Measuring> measuring;
 }
